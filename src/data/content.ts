@@ -1,4 +1,5 @@
 import { ServiceItem, FilmJourneyStage, WayOfWorking, FilmstripFrame } from '../types';
+import { asset } from '../utils/assets';
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
@@ -81,7 +82,7 @@ export const JOURNEY_STAGES: FilmJourneyStage[] = [
     description:
       'The locked cut is in sight. This is the moment to make key decisions that shape what comes next, including premiere strategy, eligibility, timing and the right route for the film.',
     badge: 'Post-Production',
-    image: '/images/35mm-film-strip.jpg',
+    image: asset('/images/35mm-film-strip.jpg'),
   },
   {
     id: 'festival-ready',
@@ -90,7 +91,7 @@ export const JOURNEY_STAGES: FilmJourneyStage[] = [
     description:
       'The film is done. Now come the bigger questions: which premiere, in what sequence, and toward which rooms? Or whether the festival route is the right one at all!',
     badge: 'Completed Cut',
-    image: '/images/frame-02-premiere.jpg',
+    image: asset('/images/frame-02-premiere.jpg'),
   },
   {
     id: 'in-circulation',
@@ -99,7 +100,7 @@ export const JOURNEY_STAGES: FilmJourneyStage[] = [
     description:
       'The premiere is behind you. Now it is about building sustained momentum across markets, distributors and audiences, giving the film a lasting life beyond its first screening.',
     badge: 'Post-Premiere',
-    image: '/images/film-market-architecture.jpg',
+    image: asset('/images/film-market-architecture.jpg'),
   },
   {
     id: 'before-the-cut',
@@ -109,7 +110,7 @@ export const JOURNEY_STAGES: FilmJourneyStage[] = [
       'Elsewhere’s work usually begins with finished films. For a small number of projects, the relationship starts earlier at the script stage. See Creative Partnership below.',
     badge: 'Early Development',
     isAlternative: true,
-    image: '/images/analog-reels.jpg',
+    image: asset('/images/analog-reels.jpg'),
   },
 ];
 
@@ -146,7 +147,7 @@ export const FILMSTRIP_FRAMES: FilmstripFrame[] = [
     aspect: '2.39:1',
     edgeCode: '35MM KODAK 5219 • 24 FPS',
     summary: 'The creative craft is complete. The strategic challenge begins.',
-    image: '/images/35mm-film-strip.jpg',
+    image: asset('/images/35mm-film-strip.jpg'),
   },
   {
     number: '02',
@@ -156,7 +157,7 @@ export const FILMSTRIP_FRAMES: FilmstripFrame[] = [
     aspect: '2.39:1',
     edgeCode: 'EASTMAN SAFETY FILM • EXP 02A',
     summary: 'A premiere is not simply a calendar date, but your film’s introduction to the global industry.',
-    image: '/images/frame-02-premiere.jpg',
+    image: asset('/images/frame-02-premiere.jpg'),
   },
   {
     number: '03',
@@ -166,7 +167,7 @@ export const FILMSTRIP_FRAMES: FilmstripFrame[] = [
     aspect: '2.39:1',
     edgeCode: 'CIRCULATION MATRIX • A-LIST WINDOWS',
     summary: 'Connecting critical praise with buyers, programmers, and festival directors.',
-    image: '/images/film-market-architecture.jpg',
+    image: asset('/images/film-market-architecture.jpg'),
   },
   {
     number: '04',
@@ -176,7 +177,7 @@ export const FILMSTRIP_FRAMES: FilmstripFrame[] = [
     aspect: '2.39:1',
     edgeCode: 'SALES & TERRITORY • MULTI-PLATFORM',
     summary: 'Securing sales agents, theatrical partners, and digital distribution tailored to the work.',
-    image: '/images/cinema-screen-audience.jpg',
+    image: asset('/images/cinema-screen-audience.jpg'),
   },
   {
     number: '05',
@@ -186,6 +187,6 @@ export const FILMSTRIP_FRAMES: FilmstripFrame[] = [
     aspect: '2.39:1',
     edgeCode: 'BEYOND THE FINAL FRAME • SUSTAINED LIFE',
     summary: 'Ensuring your story finds the viewers who will remember and champion it.',
-    image: '/images/frame-03-festivals.jpg',
+    image: asset('/images/frame-03-festivals.jpg'),
   },
 ];

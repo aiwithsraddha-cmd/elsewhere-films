@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX, Play, Pause } from 'lucide-react';
+import { asset } from '../utils/assets';
 
 interface CinematicHeroProps {
   onScrollClick: () => void;
@@ -54,8 +55,8 @@ export const CinematicHero: React.FC<CinematicHeroProps> = ({ onScrollClick }) =
         {/* Desktop Landscape Video (16:9) */}
         <video
           ref={desktopVideoRef}
-          src="/video/hero-landscape.mp4"
-          poster="/images/projector-beam-dark.jpg"
+          src={asset('/video/hero-landscape.mp4')}
+          poster={asset('/images/projector-beam-dark.jpg')}
           autoPlay
           loop
           muted={isMuted}
@@ -69,8 +70,8 @@ export const CinematicHero: React.FC<CinematicHeroProps> = ({ onScrollClick }) =
         {/* Mobile Portrait Video (9:16) */}
         <video
           ref={mobileVideoRef}
-          src="/video/hero-portrait.mp4"
-          poster="/images/projector-beam-dark.jpg"
+          src={asset('/video/hero-portrait.mp4')}
+          poster={asset('/images/projector-beam-dark.jpg')}
           autoPlay
           loop
           muted={isMuted}

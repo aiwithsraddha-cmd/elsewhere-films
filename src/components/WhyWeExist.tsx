@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { asset } from '../utils/assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,7 +122,7 @@ export const WhyWeExist: React.FC<WhyWeExistProps> = ({ onOpenPathwayModal }) =>
           <div ref={imageRef} className="lg:col-span-5 relative">
             <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-hairline-dark bg-soft-black/80 shadow-2xl group">
               <img
-                src="/images/analog-reels.jpg"
+                src={asset('/images/analog-reels.jpg')}
                 alt="Empty crimson cinema seats in the dark auditorium"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-110 brightness-80"

@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { JOURNEY_STAGES, WAYS_OF_WORKING, SERVICES_DATA } from '../data/content';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { asset } from '../utils/assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +80,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         {/* Atmospheric Projector Background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <img
-            src="/images/projector-beam-dark.jpg"
+            src={asset('/images/projector-beam-dark.jpg')}
             alt=""
             className="w-full h-full object-cover opacity-20 filter contrast-125 brightness-75"
           />

@@ -24,11 +24,11 @@ export const App: React.FC = () => {
   // Synchronize with URL path, hash and query params on mount
   useEffect(() => {
     const handleLocation = () => {
-      const path = window.location.pathname;
+      const path = window.location.pathname.replace(/\/$/, '');
       const hash = window.location.hash;
       const params = new URLSearchParams(window.location.search);
 
-      if (path === '/services' || hash === '#services' || params.get('page') === 'services') {
+      if (path.endsWith('/services') || hash === '#services' || params.get('page') === 'services') {
         setCurrentPage('services');
       } else {
         setCurrentPage('home');
@@ -94,7 +94,10 @@ export const App: React.FC = () => {
   // Page navigation handler
   const handleNavigate = (page: 'home' | 'services', hash?: string) => {
     setCurrentPage(page);
-    window.history.pushState({}, '', page === 'services' ? '/services' : '/');
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const cleanBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const targetUrl = page === 'services' ? `${cleanBase}/services` : (cleanBase || '/');
+    window.history.pushState({}, '', targetUrl);
 
     if (page === 'home' && hash) {
       setTimeout(() => {

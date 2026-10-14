@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { asset } from '../utils/assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,7 +112,7 @@ export const VisionMission: React.FC = () => {
           <div ref={imageRef} className="lg:col-span-6 relative">
             <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-cinema-black/10 border border-hairline-light shadow-lg group">
               <img
-                src="/images/projector-beam-dark.jpg"
+                src={asset('/images/projector-beam-dark.jpg')}
                 alt="Cinema auditorium facing the luminous projection screen"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-105"
